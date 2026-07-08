@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+
+# HyperFrames local caches and temporary browser thumbnails.
+hyperframes/.thumbnails/
+hyperframes/.hyperframes/
+
+# Keep rendered videos local unless intentionally added.
+hyperframes/renders/
