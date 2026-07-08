@@ -7,3 +7,4 @@ hyperframes/.hyperframes/
 
 # Keep rendered videos local unless intentionally added.
 hyperframes/renders/
+episodes/*/renders/hyperframes/*.mp4
