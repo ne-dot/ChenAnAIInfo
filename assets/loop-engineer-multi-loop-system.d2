@@ -1,0 +1,31 @@
+direction: down
+
+control: {
+  label: "Control Plane\n\nserve：只读状态 / 手动 SYNC / 批准\n人工在这里查看 proposed task，并决定是否 approved"
+  style.fill: "#E8F8EF"
+  style.stroke: "#20A464"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+worker: {
+  label: "Worker Layer\n\n一 loop 一 worker\n--loop sync | feedback | task | coding | verify | followup\n\n每个 worker 只负责自己的职责边界"
+  style.fill: "#DBEAFE"
+  style.stroke: "#2563EB"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+pipeline: {
+  label: "Artifacts / Signals / Tasks Pipeline\n\nartifacts/feedback → signals → task(proposed)\n人工批准 → coding → PR/code changes\nverify → verification report\nfollowup → followup draft"
+  style.fill: "#FEF3C7"
+  style.stroke: "#D97706"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+control -> worker: "批准 / 调度"
+worker -> pipeline: "读写文件和状态"
+pipeline -> control: "回写状态 / 等待人工门禁" {
+  style.stroke-dash: 6
+}

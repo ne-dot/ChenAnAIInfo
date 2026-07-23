@@ -1,0 +1,36 @@
+direction: down
+
+contract: {
+  label: "Loop Contract\n任务合同"
+  style.fill: "#E8F8EF"
+  style.stroke: "#20A464"
+  style.stroke-width: 4
+  style.border-radius: 22
+  style.bold: true
+}
+
+goal: {
+  label: "目标与输入\n\nGoal：这次 loop 要完成什么\nInputs：AI 可以读取哪些信息\nTask：当前具体任务是什么\nTimeline：执行频率和时间节奏"
+  style.fill: "#DBEAFE"
+  style.stroke: "#2563EB"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+control: {
+  label: "流程与边界\n\nWorkflow：按什么流程推进\nPermissions：允许做什么，不允许做什么\nStop Conditions：什么时候必须停下来"
+  style.fill: "#FEF3C7"
+  style.stroke: "#D97706"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+verify: {
+  label: "验证与交付\n\nVerification：怎样判断完成\nOutput：最终交付什么\n\n例：测试通过 / 回归覆盖 / PR 说明完整"
+  style.fill: "#EDE9FE"
+  style.stroke: "#7C3AED"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+contract -> goal -> control -> verify

@@ -1,0 +1,43 @@
+direction: down
+
+sync: {
+  label: "阶段 1：同步反馈\n\nAdmin API\n用户反馈 / Bug 反馈\n\nsync loop\n从 Admin API 同步 bug 反馈\n写入 artifacts/feedback"
+  style.fill: "#DBEAFE"
+  style.stroke: "#2563EB"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+triage: {
+  label: "阶段 2：归类与成任务\n\nfeedback loop\nDeepSeek 归类 pending 反馈，提炼 signals\n\ntask loop\nDeepSeek 判断信号是否达阈值\n生成 status = proposed 的 task"
+  style.fill: "#E8F8EF"
+  style.stroke: "#20A464"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+approval: {
+  label: "阶段 3：人工门禁\n\ntask.status === approved\n\n未批准：等待，不进入修复\n已批准：进入 coding loop"
+  style.fill: "#FEF3C7"
+  style.stroke: "#D97706"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+fix: {
+  label: "阶段 4：修复与验证\n\ncoding loop：Cursor 修复\n产出代码修改 / PR / 修复说明\n\nverify loop：DeepSeek 对照 Acceptance 写验证报告"
+  style.fill: "#FCE7F3"
+  style.stroke: "#DB2777"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+follow: {
+  label: "阶段 5：回访草稿\n\nfollowup loop\nDeepSeek 生成用户回访草稿\n\n门禁：仅草稿，永不自动发信\n发送动作由人工完成"
+  style.fill: "#FEE2E2"
+  style.stroke: "#DC2626"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+sync -> triage -> approval -> fix -> follow

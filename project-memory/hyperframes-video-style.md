@@ -23,11 +23,13 @@ Style reference image:
 
 Important: this image is a visual style reference, not a required character asset. Do not assume the AI researcher must appear, speak, lip-sync, or act in every video. Use the image to guide the 2D illustrated tech aesthetic, color palette, lab atmosphere, clothing/material feel, and overall premium AI research vibe.
 
-Current series background reference:
+Current series frame template:
 
-`/Users/zj/Documents/AI 自媒体/assets/backgrounds/ai-research-lab-dark-bg.png`
+`/Users/zj/Documents/AI 自媒体/templates/ai-video-frame-template`
 
-Use this as the baseline dark 2D AI research lab background. It is intentionally dark and should behave as visual space, not the main subject. Foreground nodes, text, paths, and product evidence should remain the visual focus.
+Use this template as the baseline for all new HyperFrames videos and segments. New videos should start from or faithfully copy the template's frame structure, pure CSS background layers, title area, animation area, and subtitle-safe area.
+
+Do not use background image files for the standard series background. The template background is pure CSS: deep navy base, perspective grid, blue/cyan/violet aurora fields, vignette, and noise. It is intentionally dark and should behave as visual space, not the main subject. Foreground nodes, text, paths, and product evidence should remain the visual focus.
 
 ## Series Core Style
 

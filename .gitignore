@@ -11,3 +11,5 @@ episodes/*/renders/hyperframes/*.mp4
 
 # Frame sequences are intermediate render artifacts.
 episodes/*/renders/*/frames/
+
+videos/*

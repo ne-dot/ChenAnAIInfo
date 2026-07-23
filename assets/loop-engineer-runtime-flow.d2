@@ -1,0 +1,31 @@
+direction: down
+
+start: {
+  label: "1. 启动与准备\n\nTrigger 触发 Loop\n读取 Loop Contract\n收集上下文：日志 / 代码 / 文档 / 历史改动"
+  style.fill: "#E0F2FE"
+  style.stroke: "#0284C7"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+loop: {
+  label: "2. 核心循环\n\nAnalyze：分析问题，形成假设\nAct：执行最小动作，改代码 / 写测试 / 调配置\nVerify：运行测试 / lint / 类型检查 / 业务脚本"
+  style.fill: "#FCE7F3"
+  style.stroke: "#DB2777"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+decision: {
+  label: "3. 根据验证结果分流\n\n通过：生成修复摘要 / PR / 风险说明\n失败：读取失败原因，回到 Analyze 继续循环\n触发停止条件：请求人工介入，输出证据和卡点"
+  style.fill: "#EDE9FE"
+  style.stroke: "#7C3AED"
+  style.stroke-width: 3
+  style.border-radius: 18
+}
+
+start -> loop -> decision
+decision -> loop: "失败，继续循环" {
+  style.stroke: "#EF4444"
+  style.stroke-dash: 6
+}

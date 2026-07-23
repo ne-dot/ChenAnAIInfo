@@ -33,7 +33,7 @@ AI 功能越来越多，但用户并没有真正轻松，因为工作流程仍�
 
 - 中央：用户任务节点或被流程线包围的用户剪影
 - 左右/四周：多个 AI 功能节点
-- 背景：使用暗版深蓝 2D 科技实验室背景 `/Users/zj/Documents/AI 自媒体/assets/backgrounds/ai-research-lab-dark-bg.png`
+- 背景：使用系列模板的纯 CSS 深蓝背景，包含透视网格、蓝紫极光、vignette 和 noise，不使用背景图片素材。
 - 可选：角落保留轻量品牌标识或 AI Research Lab 小标签，不放说话角色
 
 节点建议：
@@ -109,7 +109,7 @@ A02 责任判断标准：工作到底在谁身上
 ## 素材类型
 
 - 生成动画：AI 功能节点、用户流程线、科技实验室背景
-- 背景素材：`/Users/zj/Documents/AI 自媒体/assets/backgrounds/ai-research-lab-dark-bg.png`
+- 背景素材：无图片素材；使用系列模板的纯 CSS 背景层。
 - 参考图只用于风格参考，不需要人物视频素材
 - 不需要真实网络素材
 

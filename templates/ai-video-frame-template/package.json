@@ -1,0 +1,11 @@
+{
+  "name": "ai-video-frame-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.7.54 preview",
+    "check": "npx --yes hyperframes@0.7.54 check",
+    "snapshot": "npx --yes hyperframes@0.7.54 snapshot --at 3 --output snapshots/preview --describe false --no-end",
+    "render": "npx --yes hyperframes@0.7.54 render --quality high --output renders/video.mp4"
+  }
+}

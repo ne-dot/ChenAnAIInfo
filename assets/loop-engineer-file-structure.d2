@@ -1,0 +1,41 @@
+direction: right
+
+root: {
+  label: "loop-task/\n一次 loop 的工作目录"
+  style.fill: "#F8FAFC"
+  style.stroke: "#334155"
+  style.stroke-width: 3
+  style.border-radius: 18
+  style.bold: true
+}
+
+artifacts: {
+  label: "artifacts/\n资料区与中间产物\n\n- docs/ 背景文档\n- signals/ 外部信号\n- tasks/ 任务拆解\n- contents/ 内容产出"
+  style.fill: "#FEF3C7"
+  style.stroke: "#D97706"
+  style.stroke-width: 3
+  style.border-radius: 18
+  style.bold: true
+}
+
+contract: {
+  label: "loop-contract.md\n任务合同\n\n- Goal 目标\n- Workflow 流程\n- Task 当前任务\n- Timeline 节奏\n- Permissions 权限\n- Verification 验证标准"
+  style.fill: "#E8F8EF"
+  style.stroke: "#20A464"
+  style.stroke-width: 3
+  style.border-radius: 18
+  style.bold: true
+}
+
+logs: {
+  label: "LOGS.md\n运行日志\n\n- Observation 观察\n- Action 动作\n- Result 结果\n- Next 下一步"
+  style.fill: "#EDE9FE"
+  style.stroke: "#7C3AED"
+  style.stroke-width: 3
+  style.border-radius: 18
+  style.bold: true
+}
+
+root -> artifacts: "给 AI 看什么"
+root -> contract: "让 AI 按什么规则做"
+root -> logs: "AI 做完留下什么记录"

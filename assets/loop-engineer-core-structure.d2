@@ -1,0 +1,99 @@
+direction: right
+
+contract: {
+  label: "Loop Contract\n任务合同\n目标 / 输入 / 权限 / 验证 / 停止条件"
+  shape: rectangle
+  style.fill: "#E8F8EF"
+  style.stroke: "#20A464"
+  style.stroke-width: 3
+  style.border-radius: 18
+  style.font-color: "#103B25"
+  style.bold: true
+}
+
+runtime: {
+  label: "Loop Runtime 循环运行层"
+  style.fill: "#F8FAFC"
+  style.stroke: "#CBD5E1"
+  style.stroke-width: 2
+  style.border-radius: 24
+  trigger: {
+    label: "Trigger\n触发器"
+    shape: rectangle
+    style.fill: "#FEF3C7"
+    style.stroke: "#D97706"
+    style.stroke-width: 2
+    style.border-radius: 14
+  }
+
+  agent: {
+    label: "Agent\nAI 工程代理"
+    shape: rectangle
+    style.fill: "#DBEAFE"
+    style.stroke: "#2563EB"
+    style.stroke-width: 3
+    style.border-radius: 18
+    style.bold: true
+  }
+
+  context: {
+    label: "Context\n上下文\n代码 / 日志 / 文档 / 历史记录"
+    shape: rectangle
+    style.fill: "#E0F2FE"
+    style.stroke: "#0284C7"
+    style.stroke-width: 2
+    style.border-radius: 14
+  }
+
+  tools: {
+    label: "Tools\n工具能力\n读文件 / 改代码 / 跑测试 / 查监控"
+    shape: rectangle
+    style.fill: "#FCE7F3"
+    style.stroke: "#DB2777"
+    style.stroke-width: 2
+    style.border-radius: 14
+  }
+
+  verify: {
+    label: "Verify\n验证机制"
+    shape: rectangle
+    style.fill: "#EDE9FE"
+    style.stroke: "#7C3AED"
+    style.stroke-width: 2
+    style.border-radius: 14
+  }
+
+  done: {
+    label: "是否完成?"
+    shape: diamond
+    style.fill: "#FFFFFF"
+    style.stroke: "#64748B"
+    style.stroke-width: 2
+  }
+
+  output: {
+    label: "Output\nPR / 报告 / 修复结果"
+    shape: rectangle
+    style.fill: "#DCFCE7"
+    style.stroke: "#16A34A"
+    style.stroke-width: 2
+    style.border-radius: 14
+  }
+
+  trigger -> agent
+  agent <-> context: "读取 / 更新"
+  agent -> tools: "调用"
+  tools -> verify: "执行后验证"
+  verify -> done
+  done -> agent: "否，继续循环" {
+    style.stroke: "#EF4444"
+    style.stroke-dash: 5
+  }
+  done -> output: "是，交付"
+}
+
+contract -> runtime: "约束 / 指导整个运行层" {
+  style.stroke: "#20A464"
+  style.stroke-width: 2
+  style.stroke-dash: 6
+}

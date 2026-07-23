@@ -1,33 +1,28 @@
 # AI 自媒体项目
 
-这个仓库按“项目级制作工具 + 每期视频独立归档”的方式整理。
+这个仓库按“文档沉淀 + 可复用模板 + 最终成片”的方式整理。视频生成过程中的 HyperFrames 工程、快照、临时渲染和旧素材缓存不长期保留。
 
 ## 目录结构
 
-- `hyperframes/`：项目级 HyperFrames 工程。后续视频复用这一套预览、校验、渲染命令和通用素材引用。
-- `episodes/`：每期视频一个单独文件夹，存放脚本、分镜、原型、导出成片和复盘。
-- `assets/`：跨视频可复用素材库。
+- `templates/ai-video-frame-template/`：后续 AI 视频统一使用的 HyperFrames 画面模板。
+- `exports/loop-engineer-segments/`：已经确认保留的最终 MP4 成片。
+- `episodes/`：文档归档，包括脚本、分镜、需求、复盘和说明。
+- `assets/`：文档中仍会引用的结构图素材。
 - `project-memory/`：项目经验、风格记录、流程沉淀。
+- `export/`：文档导出产物，例如 `.docx` 和文档封面资源。
 
 ## 新开一期视频
 
-1. 在 `episodes/` 下创建新文件夹，例如 `episodes/03-topic-name/`。
-2. 建议保留这些子目录：
-   - `storyboard/`：分镜、旁白、时间轴。
-   - `prototype/`：快速验证用的临时代码或实验。
-   - `renders/`：该期导出的 MP4、截图、阶段版本。
-   - `notes/`：复盘、素材来源、发布记录。
-3. 在 `hyperframes/` 中制作或复制对应 composition；最终导出后，把成片归档到该期 `renders/`。
+1. 从 `templates/ai-video-frame-template/` 复制出临时 HyperFrames 工程。
+2. 制作时可以生成 `snapshots/`、`renders/`、预览工程等中间文件。
+3. 确认完成后，只把最终 MP4 放入 `exports/loop-engineer-segments/`，把脚本或复盘放入 `episodes/`。
+4. 收尾时删除临时工程、快照和临时渲染，避免把生成过程文件长期堆在仓库里。
 
 ## HyperFrames
 
-进入项目级工程后运行：
+后续视频优先参考：
 
-```bash
-cd hyperframes
-npm run dev
-npm run check
-npm run render
-```
+- `/Users/zj/.codex/skills/ai-video-title-system/SKILL.md`
+- `templates/ai-video-frame-template/`
 
-`hyperframes/renders/` 是临时渲染输出目录；收尾时把确认要保留的版本移动到对应 `episodes/<episode>/renders/`。
+项目不再长期保留 `hyperframes/` 或 `videos/` 生成工程目录。
